@@ -38,7 +38,7 @@ if (currentFuel + fuelAmount > fuelCapacity) {
     currentFuel += fuelAmount;
     return "Fuel successfully loaded. Current fuel: " + currentFuel + " liters.";
 }
-}
+} 
     
 
 // Getting spaceship details
