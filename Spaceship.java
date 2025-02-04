@@ -8,7 +8,11 @@ private double fuelCapacity;
 private double currentFuel;
 private double burnRate;
 private double speed;
+private double altitude;
 private ArrayList<String> astronauts;
+
+private static final double GRAVITY = 9.81;
+private static final double SPACEWALK_ALTITUDE = 70000;
 
 // Constructor
 
@@ -18,6 +22,7 @@ public Spaceship(String name, double fuelCapacity, double burnRate) {
     this.currentFuel = fuelCapacity;
     this.burnRate = burnRate;
     this.speed = 0;
+    this.altitude = 0;
     this.astronauts = new ArrayList<>();
 }
 
@@ -43,7 +48,7 @@ if (currentFuel + fuelAmount > fuelCapacity) {
     }
 }
     
-// Launch method
+// Launch simulation
 
 public void launch() {
     System.out.println(name + " is launching...");
@@ -54,7 +59,15 @@ public void launch() {
         speed += burnRate * 30;
         currentFuel -= fuelBurned;
 
-        System.out.println("Speed: " + speed + " m/s | Fuel left: " + currentFuel + " pounds");
+        // Gravity effect, which reduces speed
+        speed -= GRAVITY;
+        if (speed < 0) speed = 0;
+
+        // Increasing altitude based on the current speed
+        altitude += speed;
+
+        System.out.printf("Speed: %.2f m/s | Altitude: %.2f m | Fuel left: %.2f pounds\n",
+        speed, altitude, currentFuel);
 
         try {
             Thread.sleep(1000);
@@ -62,8 +75,23 @@ public void launch() {
             System.out.println("Launch interrupted.");
         }
     }
-    System.out.println("Fuel depleted. Speed: " + speed + " m/s. The spaceship is now drifting in space.");
+    System.out.println("Fuel depleted. The spaceship reached an altitude of " + altitude + " meters.");
 }
+
+// Spacewalk method to start a 30 second timer
+private void spacewalk() {
+    System.out.println("\\n 🌌 SPACEWALK INITIATED! 🌌");
+    System.out.println("Astronauts are stepping out for a 30-second spacewalk...");
+
+    for (int i = 30; i > 0; i--) {
+        System.out.println("🕒 Time remaining: \" + i + \" seconds...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            System.out.println("Spacewalk interrupted.");
+        }
+    }
+    } 
 
 // Getting spaceship details
 
