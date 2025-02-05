@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class Spaceship {
 public static void main(String[] args) {}
@@ -8,13 +10,21 @@ private double fuelCapacity;
 private double currentFuel;
 private double burnRate;
 private double speed;
+
 private double altitude;
+
 private ArrayList<String> astronauts;
 
 private static final double GRAVITY = 9.81;
 private static final double SPACEWALK_ALTITUDE = 70000;
 
 // Constructor
+
+public Spaceship(String name, double fuelCapacity, double currentFuel, ArrayList<String> astronauts) {
+    this.name = name;
+    this.fuelCapacity = fuelCapacity;
+    this.currentFuel = 0.0;
+}
 
 public Spaceship(String name, double fuelCapacity, double burnRate) {
     this.name = name;
@@ -45,9 +55,9 @@ if (currentFuel + fuelAmount > fuelCapacity) {
 } else {
     currentFuel += fuelAmount;
     return "Fuel successfully loaded. Current fuel: " + currentFuel + " liters.";
-    }
+}    
 }
-    
+   
 // Launch simulation
 
 public void launch() {
@@ -61,8 +71,9 @@ public void launch() {
 
         // Gravity effect, which reduces speed
         speed -= GRAVITY;
-        if (speed < 0) speed = 0;
-
+        if (speed < 0) {
+        speed = 0;
+    }
         // Increasing altitude based on the current speed
         altitude += speed;
 
@@ -91,17 +102,15 @@ private void spacewalk() {
             System.out.println("Spacewalk interrupted.");
         }
     }
-    } 
+} 
 
 // Getting spaceship details
 
 public String getInfo() {
+
     return "Spaceship: " + name +
-    "\nFuel Capacity: " + fuelCapacity + " pounds" +
-    "\nCurrent Fuel: " + currentFuel + " pounds" +
-    "\nBurn Rate: " + burnRate + " pounds/sec" +
-    "\nSpeed: " + speed + " m/s" +
+    "\nFuel Capacity: " + fuelCapacity + " liters" +
+    "\nCurrent Fuel: " + currentFuel + " liters" +
     "\nAstronauts: " + astronauts;
 }
-
 }
