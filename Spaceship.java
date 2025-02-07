@@ -1,9 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-<<<<<<< HEAD
-=======
-
->>>>>>> cc3d68ca5e94f03e8903ec79c3500ce600c639a9
 
 public class Spaceship {
 public static void main(String[] args) {}
@@ -158,15 +154,8 @@ public void spacewalk() {
 
 public String getInfo() {
 
-<<<<<<< HEAD
-    return "Spaceship: " + name + "\nFuel Capacity: " + fuelCapacity + " liters\nCurrent Fuel: " + currentFuel + " liters\nAstronauts: " + astronauts;
-}
 
-=======
-    return "Spaceship: " + name +
-    "\nFuel Capacity: " + fuelCapacity + " liters" +
-    "\nCurrent Fuel: " + currentFuel + " liters" +
-    "\nAstronauts: " + astronauts;
-    }
->>>>>>> cc3d68ca5e94f03e8903ec79c3500ce600c639a9
+    return "Spaceship: " + name + "\nFuel Capacity: " + fuelCapacity + " liters\nCurrent Fuel: " + currentFuel + " liters\nAstronauts: " + astronauts;
+
+}
 }

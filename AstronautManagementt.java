@@ -5,6 +5,15 @@ public class AstronautManagementt {
         Astronauts[] astronaut = new Astronauts[10];
         int count = 0;
         int choice;
+        String name;
+        String date;
+        int SerialNum;
+        String address;
+        String email; 
+        double weight;
+        String kin;
+        String number; 
+        double pay;
     public static void main(String[] args) {
     }
     public void stuff(){
@@ -22,9 +31,24 @@ public class AstronautManagementt {
             input.nextLine();
 
             switch (choice) {
-
                 case 1:
+                if (count < astronaut.length) {
+                    System.out.println("Enter spacecraft name: ");
+                    String name = input.nextLine();
 
+                    System.out.println("Enter fuel capacity (in liters): ");
+                    double fuelCapacity = input.nextDouble();
+                    Astronauts gg = new Astronauts (name, date, SerialNum,address, email,weight,kin,number, pay);
+                   astronaut[count] = gg;
+
+                    count++;
+
+                    System.out.println(
+                            "New spacecraft " + gg.name + " has been created.");
+                } else {
+                    System.out.println(
+                            "Maximum spacecraft capacity reached.");
+                }
                     break;
                 case 2:
 

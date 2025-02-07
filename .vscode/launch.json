@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Administation",
+            "request": "launch",
+            "mainClass": "Administation",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
+            "name": "AstronautManagementt",
+            "request": "launch",
+            "mainClass": "AstronautManagementt",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
+            "name": "Astronauts",
+            "request": "launch",
+            "mainClass": "Astronauts",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
+            "name": "EncryptPassword",
+            "request": "launch",
+            "mainClass": "EncryptPassword",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
+            "name": "Launch",
+            "request": "launch",
+            "mainClass": "Launch",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
+            "name": "SpaceShipManagment",
+            "request": "launch",
+            "mainClass": "SpaceShipManagment",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
+            "name": "Spaceship",
+            "request": "launch",
+            "mainClass": "Spaceship",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "Final-Project_dc27fc04"
+        }
+    ]
+}

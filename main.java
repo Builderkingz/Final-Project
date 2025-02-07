@@ -20,17 +20,21 @@ public class main {
             switch (choice) {
                 case 1:
                     // call the astronaut mannager class and set it up
-                
+                AstronautManagementt Astronaut = new AstronautManagementt();
+                Astronaut.stuff();
                 
                 break;
                 case 2:
                     // call the rocet manager class and set that up
-                
+                SpaceShipManagment Spaceship = new SpaceShipManagment();
+                Spaceship.stuff();
 
                 break;
 
                 case 3:
                     // call the administration and set that up
+                Administation Admin = new Administation();
+                Admin.stuff();
 
 
                 break;
