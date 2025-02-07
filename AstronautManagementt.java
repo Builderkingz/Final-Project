@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
 public class AstronautManagementt {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
         Astronauts[] astronaut = new Astronauts[10];
         int count = 0;
         int choice;
+    public static void main(String[] args) {
+    }
+    public void stuff(){
         do {
             System.out.println("\n Menu");
             System.out.println("1. Create a new Astronaut");

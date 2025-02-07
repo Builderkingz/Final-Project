@@ -1,19 +1,17 @@
 import java.util.Scanner;
-
-public class SpaceShipManagment {
-    Scanner input = new Scanner(System.in);
-    Spaceship[] Spaceship = new Spaceship[10];
-    int count = 0;
+public class Administation {
     int choice;
+    Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
+       
     }
     public void stuff(){
-        
         do {
             System.out.println("\n Menu");
-            System.out.println("1. Create a new Spaceship");
-            System.out.println("2. Assign a Astronaut");
-            System.out.println("3. Fuel Spaceship");
+            System.out.println("1. Launch");
+            System.out.println("2. ");
+            System.out.println("3. ");
             System.out.println("4. Quit");
             System.out.print("\n Enter your choice (1-4): ");
             choice = input.nextInt();
