@@ -5,7 +5,7 @@ public class main {
         Scanner input = new Scanner(System.in);
         int choice;
         do{
-            // ask them there choice in the menu 
+            // Display menu options
             System.out.println("\n Menu");
             System.out.println("1. Astronaut Manager");
             System.out.println("2. Rocket Manager");
@@ -19,20 +19,20 @@ public class main {
             input.nextLine();
             switch (choice) {
                 case 1:
-                    // call the astronaut mannager class and set it up
+                    // Call the Astronaut Management class and execute its menu
                 AstronautManagementt Astronaut = new AstronautManagementt();
                 Astronaut.stuff();
                 
                 break;
                 case 2:
-                    // call the rocet manager class and set that up
+                    // Call the Rocket Management class and execute its menu
                 SpaceShipManagment Spaceship = new SpaceShipManagment();
                 Spaceship.stuff();
 
                 break;
 
                 case 3:
-                    // call the administration and set that up
+                    // Call the Administration class and execute its menu
                 Administation Admin = new Administation();
                 Admin.stuff();
 
