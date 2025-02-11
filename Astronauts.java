@@ -1,13 +1,15 @@
 public class Astronauts {
-        String name ;
-        String date ;
-        int SerialNum;
-        String address;
-        String email;
-        double weight;
-        String kin;
-        String number;
-        double pay;
+        String name ;      // Astronaut's name
+        String date ;      // Date of birth of mission date
+        int SerialNum;     // Astronaut's serial number
+        String address;    // Home address
+        String email;      // Email address
+        double weight;     // Weight of the astronaut
+        String kin;        // ?????
+        String number;     // Contact number
+        double pay;        // Salary or mission pay
+
+        
     public static void main(String[] args) {
         
 
@@ -16,6 +18,9 @@ public class Astronauts {
 
 
     }
+
+    // Constructor
+    
     public Astronauts(String name,String date, int SerialNum, String address,String email, double weight,String kin,String number, double pay){
         this.name = name;
         this.date = date;
@@ -28,6 +33,9 @@ public class Astronauts {
         this.pay = pay;
         
     }
+
+    // Getters (Accessor Methods)
+
     public String getName(){
         return name;
     }public String getDate(){
