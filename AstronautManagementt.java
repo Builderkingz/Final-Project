@@ -33,11 +33,40 @@ public class AstronautManagementt {
             switch (choice) {
                 case 1:
                 if (count < astronaut.length) {
+<<<<<<< HEAD
                     System.out.println("Enter astronaut name: ");
                     String name = input.nextLine();
 
                     System.out.println("Enter date (day, month, year): ");
                     String date = input.next();
+=======
+                    System.out.println("\n" + " Enter spacecraft name: ");
+                    String name = input.nextLine();
+
+                    System.out.println("\n" + " Enter date of birth (day, month, year) ");
+                    String date = input.nextLine();
+
+                    System.out.println("\n" + " Enter the Serial Number");
+                    int SerialNum = input.nextInt();
+
+                    System.out.println("\n Enter their address");
+                    String address = input.nextLine();
+
+                    System.out.println(" \n Enter the email");
+                    String email = input.nextLine();
+
+                    System.out.println("\n" +  " Enter their weight");
+                    double weight = input.nextDouble();
+
+                    System.out.println("\n" + " Enter their next of kin");
+                    String kin = input.nextLine();
+
+                    System.out.println("\n" + "Enter their phone number");
+                    String number = input.nextLine();
+
+                    System.out.println("\n" + "Enter their pay");
+                    int pay = input.nextInt();
+>>>>>>> dff66edc9d82de5098e151562b6b833ed83daa14
                     Astronauts gg = new Astronauts (name, date, SerialNum,address, email,weight,kin,number, pay);
                    astronaut[count] = gg;
 

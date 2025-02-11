@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AstronautManagementt",
+            "request": "launch",
+            "mainClass": "AstronautManagementt",
+            "projectName": "Final-Project_5fccacba"
+        },
+        {
+            "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "Final-Project_5fccacba"
+        },
+        {
+            "type": "java",
+            "name": "pasword",
+            "request": "launch",
+            "mainClass": "pasword",
+            "projectName": "Final-Project_5fccacba"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
