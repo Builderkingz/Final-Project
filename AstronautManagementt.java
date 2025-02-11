@@ -20,7 +20,7 @@ public class AstronautManagementt {
         do {
             System.out.println("\n Menu");
             System.out.println("1. Create a new Astronaut");
-            System.out.println("2. Edit a Astronaut");
+            System.out.println("2. edit a Astronaut");
             System.out.println("3. Remove a Astronaut");
             System.out.println("4. Quit");
             System.out.print("\n Enter your choice (1-4): ");
@@ -33,21 +33,21 @@ public class AstronautManagementt {
             switch (choice) {
                 case 1:
                 if (count < astronaut.length) {
-                    System.out.println("Enter spacecraft name: ");
+                    System.out.println("Enter astronaut name: ");
                     String name = input.nextLine();
 
-                    System.out.println("Enter fuel capacity (in liters): ");
-                    double fuelCapacity = input.nextDouble();
+                    System.out.println("Enter date (day, month, year): ");
+                    String date = input.next();
                     Astronauts gg = new Astronauts (name, date, SerialNum,address, email,weight,kin,number, pay);
                    astronaut[count] = gg;
 
                     count++;
 
                     System.out.println(
-                            "New spacecraft " + gg.name + " has been created.");
+                            "New astronaut " + gg.name + " has been created.");
                 } else {
                     System.out.println(
-                            "Maximum spacecraft capacity reached.");
+                            "Maximum astronaut capacity reached.");
                 }
                     break;
                 case 2:
