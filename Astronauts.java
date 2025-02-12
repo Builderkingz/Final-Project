@@ -5,7 +5,7 @@ public class Astronauts {
         String address;    // Home address
         String email;      // Email address
         double weight;     // Weight of the astronaut
-        String kin;        // ?????
+        String kin;        // Placeholder
         String number;     // Contact number
         double pay;        // Salary or mission pay
 
@@ -20,7 +20,7 @@ public class Astronauts {
     }
 
     // Constructor
-    
+
     public Astronauts(String name,String date, int SerialNum, String address,String email, double weight,String kin,String number, double pay){
         this.name = name;
         this.date = date;

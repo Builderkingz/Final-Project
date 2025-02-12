@@ -42,6 +42,7 @@ public class main {
             }
         }while (choice != 4);
     
-
+        // Close scanner to prevent resource leaks
+        input.close();
     }
 }
