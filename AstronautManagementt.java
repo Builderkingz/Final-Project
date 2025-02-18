@@ -31,7 +31,7 @@ public class AstronautManagementt {
             // Display menu options
             System.out.println("\n Menu");
             System.out.println("1. Create a new Astronaut");
-            System.out.println("2. edit a Astronaut");
+            System.out.println("2. Edit a Astronaut");
             System.out.println("3. Remove a Astronaut");
             System.out.println("4. Quit");
             System.out.print("\n Enter your choice (1-4): ");

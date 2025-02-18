@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "Final-Project_85289ddb"
+        },
+        {
+            "type": "java",
+            "name": "Astronauts",
+            "request": "launch",
+            "mainClass": "Astronauts",
+            "projectName": "Final-Project_85289ddb"
+        },
+        {
+            "type": "java",
             "name": "AstronautManagementt",
             "request": "launch",
             "mainClass": "AstronautManagementt",
