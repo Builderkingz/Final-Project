@@ -1,25 +1,13 @@
 public class Astronauts {
-        String name ;      // Astronaut's name
-        String date ;      // Date of birth of mission date
-        int SerialNum;     // Astronaut's serial number
-        String address;    // Home address
-        String email;      // Email address
-        double weight;     // Weight of the astronaut
-        String kin;        // Placeholder
-        String number;     // Contact number
-        double pay;        // Salary or mission pay
-
-        
-    public static void main(String[] args) {
-        
-
-        
-
-
-
-    }
-
-    // Constructor
+        String name ;
+        String date ;
+        int SerialNum;
+        String address;
+        String email;
+        double weight;
+        String kin;
+        String number;
+        double pay;
 
     public Astronauts(String name,String date, int SerialNum, String address,String email, double weight,String kin,String number, double pay){
         this.name = name;

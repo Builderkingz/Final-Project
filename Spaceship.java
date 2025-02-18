@@ -2,9 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Spaceship {
-public static void main(String[] args) {}
-
-private String name;
+    private String name;
 private double fuelCapacity;
 private double currentFuel;
 private double burnRate;
