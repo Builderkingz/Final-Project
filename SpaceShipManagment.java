@@ -1,24 +1,50 @@
 import java.util.Scanner;
 
 public class SpaceShipManagment {
+
+    // Scanner object for user input
     Scanner input = new Scanner(System.in);
+
+    // Array to store Spaceships (maximum of 10)
     Spaceship[] Spaceship = new Spaceship[10];
+
+    // Counter to track the number of spaceships created
     int count = 0;
+
+    // Variable to store the user's menu choice
     int choice;
+<<<<<<< HEAD
+=======
+
+    // Main Method
+    public static void main(String[] args) {
+    }
+
+    // Method to handle the spaceship management menu
+>>>>>>> ab578b1b6a7f2ec446dab25cd1a51efa7e5dab70
     public void stuff(){
         
         do {
+            // Display menu options
             System.out.println("\n Menu");
             System.out.println("1. Create a new Spaceship");
             System.out.println("2. Assign a Astronaut");
             System.out.println("3. Fuel Spaceship");
             System.out.println("4. Quit");
             System.out.print("\n Enter your choice (1-4): ");
+
+            // Get user input
             choice = input.nextInt();
+
+            // Validate input range
             if (choice > 4 || choice < 1){
                 System.out.println("Invalid choice. Please enter a number between 1 and 4.");
             }
+
+            // Get user input
             input.nextLine();
+
+            // Handle user selection
 
             switch (choice) {
 

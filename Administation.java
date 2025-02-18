@@ -1,21 +1,40 @@
 import java.util.Scanner;
 public class Administation {
+
+    // Variable to store user menu choice
     int choice;
+
+    // Scanner for user input
     Scanner input = new Scanner(System.in);
+<<<<<<< HEAD
     
+=======
+
+    // Main Method
+    public static void main(String[] args) {
+       
+    }
+
+    // Method to handle the Administration menu and options
+>>>>>>> ab578b1b6a7f2ec446dab25cd1a51efa7e5dab70
     public void stuff(){
         do {
+            // Display menu options
             System.out.println("\n Menu");
             System.out.println("1. Launch");
             System.out.println("2. ");
             System.out.println("3. ");
             System.out.println("4. Quit");
             System.out.print("\n Enter your choice (1-4): ");
+
+            // Get user choice
             choice = input.nextInt();
+
+            // Validate input range
             if (choice > 4 || choice < 1){
                 System.out.println("Invalid choice. Please enter a number between 1 and 4.");
             }
-            input.nextLine();
+            input.nextLine(); // Consume newline
 
             switch (choice) {
 
