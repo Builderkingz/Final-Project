@@ -2,10 +2,7 @@ import java.util.Scanner;
 public class Administation {
     int choice;
     Scanner input = new Scanner(System.in);
-
-    public static void main(String[] args) {
-       
-    }
+    
     public void stuff(){
         do {
             System.out.println("\n Menu");

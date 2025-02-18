@@ -8,14 +8,7 @@ public class Astronauts {
         String kin;
         String number;
         double pay;
-    public static void main(String[] args) {
-        
 
-        
-
-
-
-    }
     public Astronauts(String name,String date, int SerialNum, String address,String email, double weight,String kin,String number, double pay){
         this.name = name;
         this.date = date;

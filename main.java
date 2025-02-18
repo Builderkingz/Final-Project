@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
+        
         Scanner input = new Scanner(System.in);
         int choice;
         do{
@@ -19,7 +20,7 @@ public class main {
             input.nextLine();
             switch (choice) {
                 case 1:
-                    // call the astronaut mannager class and set it up
+                    // call the astronaut mannager class and set it up1
                 AstronautManagementt Astronaut = new AstronautManagementt();
                 Astronaut.stuff();
                 

@@ -27,25 +27,4 @@ public class pasword{
         byte[] decryptedPassword = cipher.doFinal(decodedBytes);
         return new String(decryptedPassword);
     }
-
-    public static void main(String[] args) {
-        try {
-            // Generate a key
-            SecretKey key = generateKey();
-
-            // Original password
-            String password = "my";
-
-            // Encrypt the password
-            String encryptedPassword = encrypt(password, key);
-            System.out.println("Encrypted password: " + encryptedPassword);
-
-            // Decrypt the password
-            String decryptedPassword = decrypt(encryptedPassword, key);
-            System.out.println("Decrypted password: " + decryptedPassword);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -5,8 +5,6 @@ public class SpaceShipManagment {
     Spaceship[] Spaceship = new Spaceship[10];
     int count = 0;
     int choice;
-    public static void main(String[] args) {
-    }
     public void stuff(){
         
         do {
