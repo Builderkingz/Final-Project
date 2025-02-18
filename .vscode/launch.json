@@ -6,7 +6,6 @@
     "configurations": [
         {
             "type": "java",
-<<<<<<< HEAD
             "name": "main",
             "request": "launch",
             "mainClass": "main",
@@ -18,19 +17,6 @@
             "request": "launch",
             "mainClass": "Astronauts",
             "projectName": "Final-Project_85289ddb"
-=======
-            "name": "maincode",
-            "request": "launch",
-            "mainClass": "maincode",
-            "projectName": "Final-Project_dc27fc04"
-        },
-        {
-            "type": "java",
-            "name": "pasword",
-            "request": "launch",
-            "mainClass": "pasword",
-            "projectName": "Final-Project_dc27fc04"
->>>>>>> 1ffdfbb01e4104bf43de51b69c453175d0d7b498
         },
         {
             "type": "java",
