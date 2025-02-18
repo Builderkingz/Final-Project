@@ -6,17 +6,7 @@ public class Administation {
 
     // Scanner for user input
     Scanner input = new Scanner(System.in);
-<<<<<<< HEAD
     
-=======
-
-    // Main Method
-    public static void main(String[] args) {
-       
-    }
-
-    // Method to handle the Administration menu and options
->>>>>>> ab578b1b6a7f2ec446dab25cd1a51efa7e5dab70
     public void stuff(){
         do {
             // Display menu options

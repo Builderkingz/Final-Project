@@ -1,12 +1,19 @@
 import java.util.Scanner;
 
-public class main {
-    public static void main(String[] args) {
-        
+import javax.crypto.SecretKey;
+
+public class maincode {
+
+  
+    public static void main(String[] args) throws Exception {
+        SecretKey key = pasword.generateKey();
+        String pas = null;
+        pasword.encrypt(pas,key);
+        pasword.decrypt(null,key);
         Scanner input = new Scanner(System.in);
         int choice;
         do{
-            // Display menu options
+            // ask them there choice in the menu 
             System.out.println("\n Menu");
             System.out.println("1. Astronaut Manager");
             System.out.println("2. Rocket Manager");
@@ -20,24 +27,20 @@ public class main {
             input.nextLine();
             switch (choice) {
                 case 1:
-<<<<<<< HEAD
                     // call the astronaut mannager class and set it up1
-=======
-                    // Call the Astronaut Management class and execute its menu
->>>>>>> ab578b1b6a7f2ec446dab25cd1a51efa7e5dab70
                 AstronautManagementt Astronaut = new AstronautManagementt();
                 Astronaut.stuff();
                 
                 break;
                 case 2:
-                    // Call the Rocket Management class and execute its menu
+                    // call the rocet manager class and set that up
                 SpaceShipManagment Spaceship = new SpaceShipManagment();
                 Spaceship.stuff();
 
                 break;
 
                 case 3:
-                    // Call the Administration class and execute its menu
+                    // call the administration and set that up
                 Administation Admin = new Administation();
                 Admin.stuff();
 
@@ -46,8 +49,7 @@ public class main {
 
             }
         }while (choice != 4);
-    
-        // Close scanner to prevent resource leaks
-        input.close();
+    input.close();
+
     }
 }

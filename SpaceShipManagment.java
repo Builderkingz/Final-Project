@@ -13,15 +13,8 @@ public class SpaceShipManagment {
 
     // Variable to store the user's menu choice
     int choice;
-<<<<<<< HEAD
-=======
-
-    // Main Method
-    public static void main(String[] args) {
-    }
 
     // Method to handle the spaceship management menu
->>>>>>> ab578b1b6a7f2ec446dab25cd1a51efa7e5dab70
     public void stuff(){
         
         do {
