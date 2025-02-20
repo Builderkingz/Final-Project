@@ -8,8 +8,8 @@ public class maincode {
     public static void main(String[] args) throws Exception {
         SecretKey key = pasword.generateKey();
         String pas = null;
-        pasword.encrypt(pas,key);
-        pasword.decrypt(null,key);
+        password.encrypt(pas,key);
+        password.decrypt(null,key);
         Scanner input = new Scanner(System.in);
         int choice;
         do{

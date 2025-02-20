@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "maincode",
+            "request": "launch",
+            "mainClass": "maincode",
+            "projectName": "Final-Project_85289ddb"
+        },
+        {
+            "type": "java",
             "name": "main",
             "request": "launch",
             "mainClass": "main",
