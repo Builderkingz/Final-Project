@@ -52,10 +52,10 @@ public class AstronautManagementt {
                     System.out.println("\n Enter the astronaut's address: ");
                     String address = input.nextLine();
 
-                    System.out.println(" \n Enter the astronaut's email: ");
+                    System.out.println("\n Enter the astronaut's email: ");
                     String email = input.nextLine();
 
-                    System.out.println("\n" +  " Enter the astronaut's weight: ");
+                    System.out.println("\n Enter the astronaut's weight: ");
                     double weight = input.nextDouble();
                     input.nextLine(); // Consume newline
 
@@ -118,7 +118,10 @@ public class AstronautManagementt {
 
                     System.out.println("\n Enter new pay: ");
                      pay = input.nextInt();
-                    System.out.println("Update made");
+
+                    // Update astronaut details
+                    astronaut[craftNumber] = new Astronauts(name, date, SerialNum, address, email, weight, kin, number, pay);
+                    System.out.println("Update saved.");
                     break;
 
                 case 3:
@@ -133,6 +136,14 @@ public class AstronautManagementt {
                         System.out.println("Invalid astronaut selection.");
                         craftNumber = input.nextInt();
                     }
+
+                    // Shift array elements to remove the astronaut
+                    for (int i = RemoveNumber; i < count - 1; i++) {
+                        astronaut[i] = astronaut[i + 1];
+                    }
+                    astronaut[count - 1] = null;
+                    count--;
+
                     break;
             }
         } while (choice != 4); // Loop until user chooses to quit
