@@ -6,7 +6,7 @@ public class maincode {
 
   
     public static void main(String[] args) throws Exception {
-        SecretKey key = pasword.generateKey();
+        SecretKey key = password.generateKey();
         String pas = null;
         password.encrypt(pas,key);
         password.decrypt(null,key);
