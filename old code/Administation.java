@@ -1,48 +1,39 @@
 import java.util.Scanner;
+public class Administation {
 
-public class SpaceShipManagment {
-
-    // Scanner object for user input
-    Scanner input = new Scanner(System.in);
-
-    // Array to store Spaceships (maximum of 10)
-    Spaceship[] Spaceship = new Spaceship[10];
-
-    // Counter to track the number of spaceships created
-    int count = 0;
-
-    // Variable to store the user's menu choice
+    // Variable to store user menu choice
     int choice;
 
-    // Method to handle the spaceship management menu
+    // Scanner for user input
+    Scanner input = new Scanner(System.in);
+    
+    private String name;        // Name of the spacecraft
+    private double currentFuel;        // Current fuel level
+    private double burnRate;        // Rate of fuel consumption
     public void stuff(){
-        
         do {
             // Display menu options
             System.out.println("\n Menu");
-            System.out.println("1. Create a new Spaceship");
-            System.out.println("2. Assign a Astronaut");
-            System.out.println("3. Fuel Spaceship");
+            System.out.println("1. Launch");
+            System.out.println("2. remove assinged astronauts");
+            System.out.println("3. ");
             System.out.println("4. Quit");
             System.out.print("\n Enter your choice (1-4): ");
 
-            // Get user input
+            // Get user choice
             choice = input.nextInt();
 
             // Validate input range
             if (choice > 4 || choice < 1){
                 System.out.println("Invalid choice. Please enter a number between 1 and 4.");
             }
-
-            // Get user input
-            input.nextLine();
-
-            // Handle user selection
+            input.nextLine(); // Consume newline
 
             switch (choice) {
 
                 case 1:
-
+                Launch rocket = new Launch(name, currentFuel, burnRate);
+                rocket.launch();
                     break;
                 case 2:
 

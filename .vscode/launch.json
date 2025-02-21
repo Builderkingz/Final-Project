@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MissionControl",
+            "request": "launch",
+            "mainClass": "MissionControl",
+            "projectName": "Final-Project_dc27fc04"
+        },
+        {
+            "type": "java",
             "name": "maincode",
             "request": "launch",
             "mainClass": "maincode",

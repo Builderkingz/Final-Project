@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import Kruskie.AstronautManagement;
+
 public class AstronautManagementt {
     Scanner input = new Scanner(System.in);
         Astronauts[] astronaut = new Astronauts[10];
@@ -32,38 +34,7 @@ public class AstronautManagementt {
             switch (choice) {
                 case 1:
                 if (count < astronaut.length) {
-                    System.out.println("\n" + " Enter spacecraft name: ");
-                    String name = input.nextLine();
-
-                    System.out.println("\n" + " Enter date of birth (day, month, year) ");
-                    String date = input.nextLine();
-
-                    System.out.println("\n" + " Enter the Serial Number");
-                    int SerialNum = input.nextInt();
-                    input.nextLine();
-
-                    System.out.println("\n Enter their address");
-                    String address = input.nextLine();
-
-                    System.out.println(" \n Enter the email");
-                    String email = input.nextLine();
-
-                    System.out.println("\n" +  " Enter their weight");
-                    double weight = input.nextDouble();
-                    input.nextLine();
-
-                    System.out.println("\n" + " Enter their next of kin");
-                    String kin = input.nextLine();
-
-                    System.out.println("\n" + "Enter their phone number");
-                    String number = input.nextLine();
-
-                    System.out.println("\n" + "Enter their pay");
-                    int pay = input.nextInt();
-                    Astronauts gg = new Astronauts (name, date, SerialNum,address, email,weight,kin,number, pay);
-                   astronaut[count] = gg;
-
-                    count++;
+                    astronauts.add(AstronautManagement.createAstronaut(input));
 
                     System.out.println(
                             "New astronaut " + gg.name + " has been created."); 
@@ -125,5 +96,44 @@ public class AstronautManagementt {
                     break;
             }
         } while (choice != 4);
+    }
+
+
+
+
+    public static Astronauts crateAstronaut (Scanner input){
+        System.out.println("\n" + " Enter spacecraft name: ");
+                    String name = input.nextLine();
+
+                    System.out.println("\n" + " Enter date of birth (day, month, year) ");
+                    String date = input.nextLine();
+
+                    System.out.println("\n" + " Enter the Serial Number");
+                    int SerialNum = input.nextInt();
+                    input.nextLine();
+
+                    System.out.println("\n Enter their address");
+                    String address = input.nextLine();
+
+                    System.out.println(" \n Enter the email");
+                    String email = input.nextLine();
+
+                    System.out.println("\n" +  " Enter their weight");
+                    double weight = input.nextDouble();
+                    input.nextLine();
+
+                    System.out.println("\n" + " Enter their next of kin");
+                    String kin = input.nextLine();
+
+                    System.out.println("\n" + "Enter their phone number");
+                    String number = input.nextLine();
+
+                    System.out.println("\n" + "Enter their pay");
+                    int pay = input.nextInt();
+                    Astronauts gg = new Astronauts (name, date, SerialNum,address, email,weight,kin,number, pay);
+                   this.astronaut[count] = gg;
+
+                    count++;
+                return new Astronauts(name, date, SerialNum, address, email, weight, kin, number, pay);
     }
 }

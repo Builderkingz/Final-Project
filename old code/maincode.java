@@ -1,22 +1,35 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.crypto.SecretKey;
 
 public class maincode {
-
-  
+     
     public static void main(String[] args) throws Exception {
-        SecretKey key = pasword.generateKey();
-        String pas = null;
-        pasword.encrypt(pas,key);
-        pasword.decrypt(null,key);
+        // // When the program runs. Check if there is a passwords.txt file
+        // // If passwords.txt exists, ask the user for the password.
+        // // Encrypt the password they give and compare hashes OR decrypt the stored password and compare strings
+        // // If the passwords.txt does not exist, ask the user to enter a password
+        // // Encrypt this password and store it in passwords.txt
+        // if(pasword.firstTimeCheck()) {
+        //     // First time
+        //     // Ask for password
+        //     // Save it
+        // } else {
+        //     // Check credentials
+        // }
+        // String pas = "abc123";
+        // pasword.encrypt(pas);
+        // pasword.decrypt(null);
         Scanner input = new Scanner(System.in);
+        ArrayList<Astronaut> astronauts = new ArrayList<Astronaut>();
+        ArrayList<Spaceship> spaceships = new ArrayList<Spaceship>();
+  
         int choice;
         do{
             // ask them there choice in the menu 
             System.out.println("\n Menu");
             System.out.println("1. Astronaut Manager");
-            System.out.println("2. Rocket Manager");
+            System.out.println("2. Spaceship Manager");
             System.out.println("3. Administation");
             System.out.println("4. Quit");
             System.out.println("\n Enter your choice");
