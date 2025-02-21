@@ -49,7 +49,7 @@ public class SpaceshipManagement {
         System.out.println(AstronautSelected + "has been added to" + selectedShip);
         return spaceships.add(selectedShip).assignedAstronauts.add(astros.get(AstronautSelected));
     }
-
+}
 
 
 //     public static Spaceship LoadFuel(ArrayList<spaceships> spaceships, Scanner input) {
