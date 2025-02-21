@@ -3,7 +3,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 import java.util.Base64;
-public class password{
+public class Pasword{
 
  
 

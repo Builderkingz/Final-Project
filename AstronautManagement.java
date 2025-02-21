@@ -52,7 +52,7 @@ public class AstronautManagement {
 
         int craftNumber = input.nextInt();
         while (craftNumber < 0 || craftNumber > astronauts.size()) {
-            System.out.println("Invalid spacecraft selection.");
+            System.out.println("Invalid astronaut selection.");
             craftNumber = input.nextInt();
         }
 

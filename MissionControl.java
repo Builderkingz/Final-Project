@@ -7,7 +7,7 @@ public class MissionControl {
         int choice;
         Scanner input = new Scanner(System.in);
         ArrayList<Astronaut> astronauts = new ArrayList<Astronaut>();
-        ArrayList<spaceships> spaceships = new ArrayList<spaceships>();
+        ArrayList<Spaceship> spaceships = new ArrayList<Spaceship>();
 
         do {
             System.out.println("\n Menu");
@@ -43,8 +43,8 @@ public class MissionControl {
                                 astronauts.add(AstronautManagement.editAstronaut(input, astronauts));
                                 break;
                             case 3:
-                            astronauts.remove(AstronautManagement.removeAstronaut(input, astronauts));
-                            break;
+                                astronauts.remove(AstronautManagement.removeAstronaut(input, astronauts));
+                                break;
                         }
                     } while (choice != 4);
                     break;
@@ -70,41 +70,41 @@ public class MissionControl {
                         input.nextLine();
                         switch (choice) {
                             case 1:
-                            spaceships.add(Spaceship.CreateSpaceship(input));
+                                spaceships.add(SpaceshipManagement.CreateSpaceship(input));
                                 break;
                             case 2:
-                            spaceships.add(Spaceship.AssignAstronaut(astronauts, spaceships, input));
+                                spaceships.add(SpaceshipManagement.AssignAstronaut(astronauts, spaceships, input));
                                 break;
                             case 3:
-                            spaceships.add(Spaceship.LoadFuel(spaceships, input));
+                                spaceships.add(SpaceshipManagement.LoadFuel(spaceships, input));
                                 break;
 
                         }
                     } while (choice != 4);
                     break;
-                // case 3:
-                //     do {
-                //         // Display menu options
-                //         System.out.println("\n Menu");
-                //         System.out.println("1. Launch");
-                //         System.out.println("2. remove assinged astronauts");
-                //         System.out.println("3. ");
-                //         System.out.println("4. Quit");
-                //         System.out.print("\n Enter your choice (1-4): ");
+                // // case 3:
+                // //     do {
+                // //         // Display menu options
+                // //         System.out.println("\n Menu");
+                // //         System.out.println("1. Launch");
+                // //         System.out.println("2. remove assinged astronauts");
+                // //         System.out.println("3. ");
+                // //         System.out.println("4. Quit");
+                // //         System.out.print("\n Enter your choice (1-4): ");
 
-                //         // Get user choice
-                //         choice = input.nextInt();
+                // //         // Get user choice
+                // //         choice = input.nextInt();
 
-                //         // Validate input range
-                //         if (choice > 4 || choice < 1) {
-                //             System.out.println("Invalid choice. Please enter a number between 1 and 4.");
-                //         }
-                //         input.nextLine(); // Consume newline
-                //         switch (choice) {
-                //             case 1:
+                // //         // Validate input range
+                // //         if (choice > 4 || choice < 1) {
+                // //             System.out.println("Invalid choice. Please enter a number between 1 and 4.");
+                // //         }
+                // //         input.nextLine(); // Consume newline
+                // //         switch (choice) {
+                // //             case 1:
 
-                //         }
-                //         break;
+                // //         }
+                // //         break;
                 //     } while (choice != 4);
                 //     break;
             }
