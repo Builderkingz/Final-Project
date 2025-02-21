@@ -9,6 +9,13 @@
             "name": "MissionControl",
             "request": "launch",
             "mainClass": "MissionControl",
+            "projectName": "Final-Project_37ad1b71"
+        },
+        {
+            "type": "java",
+            "name": "MissionControl",
+            "request": "launch",
+            "mainClass": "MissionControl",
             "projectName": "Final-Project_dc27fc04"
         },
         {

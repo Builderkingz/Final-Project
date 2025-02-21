@@ -7,7 +7,7 @@ public class MissionControl {
         int choice;
         Scanner input = new Scanner(System.in);
         ArrayList<Astronaut> astronauts = new ArrayList<Astronaut>();
-        ArrayList<Spaceship> spaceships = new ArrayList<Spaceship>();
+        ArrayList<spaceships> spaceships = new ArrayList<spaceships>();
 
         do {
             System.out.println("\n Menu");
@@ -70,7 +70,13 @@ public class MissionControl {
                         input.nextLine();
                         switch (choice) {
                             case 1:
-                                spaceships = Spaceship.displayAddAstroMenu(astronauts, spaceships);
+                            spaceships.add(Spaceship.CreateSpaceship(input));
+                                break;
+                            case 2:
+                            spaceships.add(Spaceship.AssignAstronaut(astronauts, spaceships, input));
+                                break;
+                            case 3:
+                            spaceships.add(Spaceship.LoadFuel(spaceships, input));
                                 break;
 
                         }

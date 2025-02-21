@@ -41,9 +41,7 @@ public class AstronautManagementt {
                 // Create a new astronaut
                 case 1:
                 if (count < astronaut.length) {
-<<<<<<< HEAD:old code/AstronautManagementt.java
                     astronauts.add(AstronautManagement.createAstronaut(input));
-=======
                     System.out.println("\n Enter spacecraft name: ");
                     String name = input.nextLine();
 
@@ -75,7 +73,6 @@ public class AstronautManagementt {
                     Astronauts gg = new Astronauts (name, date, SerialNum,address, email,weight,kin,number, pay);
                     astronaut[count] = gg;
                     count++; // Increase astronaut count
->>>>>>> 7a28683d91347ec639af81c7f92cdff530aa9b9b:AstronautManagementt.java
 
                     System.out.println(
                             "New astronaut " + gg.name + " has been created."); 

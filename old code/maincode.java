@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class maincode {
      
     public static void main(String[] args) throws Exception {
-<<<<<<< HEAD:old code/maincode.java
         // // When the program runs. Check if there is a passwords.txt file
         // // If passwords.txt exists, ask the user for the password.
         // // Encrypt the password they give and compare hashes OR decrypt the stored password and compare strings
@@ -21,15 +20,13 @@ public class maincode {
         // String pas = "abc123";
         // pasword.encrypt(pas);
         // pasword.decrypt(null);
-=======
         SecretKey key = password.generateKey();
         String pas = null;
         password.encrypt(pas,key);
         password.decrypt(null,key);
->>>>>>> 7a28683d91347ec639af81c7f92cdff530aa9b9b:maincode.java
         Scanner input = new Scanner(System.in);
         ArrayList<Astronaut> astronauts = new ArrayList<Astronaut>();
-        ArrayList<Spaceship> spaceships = new ArrayList<Spaceship>();
+        ArrayList<spaceships> spaceships = new ArrayList<spaceships>();
   
         int choice;
         do{
@@ -54,7 +51,7 @@ public class maincode {
                 break;
                 case 2:
                     // call the rocet manager class and set that up
-                SpaceShipManagment Spaceship = new SpaceShipManagment();
+                spaceshipsmanagement Spaceship = new spaceshipsmanagement();
                 Spaceship.stuff();
 
                 break;
