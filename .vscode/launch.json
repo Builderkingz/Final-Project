@@ -16,14 +16,21 @@
             "name": "maincode",
             "request": "launch",
             "mainClass": "maincode",
-            "projectName": "Final-Project_dc27fc04"
+            "projectName": "Final-Project_85289ddb"
         },
         {
             "type": "java",
-            "name": "pasword",
+            "name": "main",
             "request": "launch",
-            "mainClass": "pasword",
-            "projectName": "Final-Project_dc27fc04"
+            "mainClass": "main",
+            "projectName": "Final-Project_85289ddb"
+        },
+        {
+            "type": "java",
+            "name": "Astronauts",
+            "request": "launch",
+            "mainClass": "Astronauts",
+            "projectName": "Final-Project_85289ddb"
         },
         {
             "type": "java",
