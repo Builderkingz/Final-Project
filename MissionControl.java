@@ -1,9 +1,39 @@
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class MissionControl {
     public static void main(String[] args) {
+        // Path to your text file
+        String filePath = "Pasword.txt"; // Change this to your desired file path
+
+        // Create a File object
+        File file = new File(filePath);
+
+        // Check if the file exists
+        if (!file.exists()) {
+            try {
+                // If file does not exist, create a new one
+                boolean fileCreated = file.createNewFile();
+                if (fileCreated) {
+                    System.out.println("File was created: " + filePath);
+                } else {
+                    System.out.println("File could not be created.");
+                }
+            } catch (IOException e) {
+                // Handle exception if something goes wrong
+                System.out.println("An error occurred while creating the file.");
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("File already exists: " + filePath);
+        }
+
         int choice;
         Scanner input = new Scanner(System.in);
         ArrayList<Astronaut> astronauts = new ArrayList<Astronaut>();

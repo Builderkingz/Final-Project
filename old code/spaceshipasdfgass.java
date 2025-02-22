@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class spaceships {
+public class spaceshipasdfgass {
     private String name;
 private double fuelCapacity;
 private double currentFuel;
@@ -18,7 +18,7 @@ private static final double SPACEWALK_ALTITUDE = 70000;
 
 // Constructor for predefined astronauts
 
-public spaceships(String name, double fuelCapacity, double currentFuel, ArrayList<String> astronauts) { // Refer to line 11
+public spaceshipasdfgass(String name, double fuelCapacity, double currentFuel, ArrayList<String> astronauts) { // Refer to line 11
     this.name = name;
     this.fuelCapacity = fuelCapacity;
     this.currentFuel = Math.min(currentFuel, fuelCapacity);
@@ -29,7 +29,7 @@ public spaceships(String name, double fuelCapacity, double currentFuel, ArrayLis
 
 // Constructor with only burn rate
 
-public spaceships(String name, double fuelCapacity, double burnRate) {
+public spaceshipasdfgass(String name, double fuelCapacity, double burnRate) {
     this.name = name;
     this.fuelCapacity = fuelCapacity;
     this.currentFuel = fuelCapacity;
@@ -78,7 +78,7 @@ public ArrayList<String> getastronauts(){ // Refer to line 11
     return astronauts;
 }
 
-public static spaceships CreateSpaceship(Scanner input) {
+public static spaceshipasdfgass CreateSpaceship(Scanner input) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'CreateSpaceship'");
 }

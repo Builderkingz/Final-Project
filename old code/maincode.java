@@ -20,13 +20,13 @@ public class maincode {
         // String pas = "abc123";
         // pasword.encrypt(pas);
         // pasword.decrypt(null);
-        SecretKey key = password.generateKey();
+        SecretKey key = Pasword.generateKey();
         String pas = null;
-        password.encrypt(pas,key);
-        password.decrypt(null,key);
+        Pasword.encrypt(pas,key);
+        Pasword.decrypt(null,key);
         Scanner input = new Scanner(System.in);
         ArrayList<Astronaut> astronauts = new ArrayList<Astronaut>();
-        ArrayList<spaceships> spaceships = new ArrayList<spaceships>();
+        ArrayList<spaceshipasdfgass> spaceships = new ArrayList<spaceshipasdfgass>();
   
         int choice;
         do{
