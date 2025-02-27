@@ -1,11 +1,16 @@
 
 // world trigger
+
+import java.util.ArrayList;
+
 public class Spaceship {
     String name;
-    int currentFuel;
+    double currentFuel;
     int fuelCapacity;
 
-    public Spaceship(String name, int currentFuel, int fuelCapacity) {
+    ArrayList<Astronaut> assignedAstronauts = new ArrayList<Astronaut>();
+
+    public Spaceship(String name, double currentFuel, int fuelCapacity) {
         this.name = name;
         this.currentFuel = currentFuel;
         this.fuelCapacity = fuelCapacity;
@@ -15,19 +20,23 @@ public class Spaceship {
         return name;
     }
 
-    public int GetFuel() {
+    public double GetFuel() {
         return currentFuel;
     }
-    public int GetFuelCapacity(){
+
+    public int GetFuelCapacity() {
         return fuelCapacity;
     }
-    public void SetName(String name){
+
+    public void SetName(String name) {
         this.name = name;
     }
-    public void SetFuel(int fuel){
+
+    public void SetFuel(double fuel) {
         this.currentFuel = fuel;
     }
-    public void SetFuelCapacity(int fuelCapacity){
+
+    public void SetFuelCapacity(int fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
     }
 }

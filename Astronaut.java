@@ -22,7 +22,9 @@ public class Astronaut {
         this.pay = pay;
 
     }
-
+    public String toCSV() {
+        return name + "," + date + "," + SerialNum + "," + address + "," + email + "," + weight + "," + kin + "," + number + "," + pay;
+    }
     // Getters (Accessor Methods)
 
     public String getName() {

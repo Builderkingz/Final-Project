@@ -28,6 +28,11 @@ public class AstronautManagement {
 
         System.out.println(" \n Enter the email");
         String email = input.nextLine();
+        if (email.endsWith("@gmail.com")) {
+            System.out.println("Email accepted.");
+        } else {
+            System.out.println("Invalid email. Please enter a valid Gmail address.");
+        }
 
         System.out.println("\n" + " Enter their weight");
         double weight = input.nextDouble();
@@ -58,6 +63,7 @@ public class AstronautManagement {
 
         System.out.println("\n" + " Enter date of birth (day, month, year) ");
         astronauts.get(craftNumber).SetDate(input.nextLine());
+        input.nextLine();
 
         System.out.println("\n" + " Enter the Serial Number");
         astronauts.get(craftNumber).SetSerialNum(input.nextInt());
