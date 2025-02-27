@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +16,17 @@ public class SpaceshipManagement {
 
         System.out.println("what is the fuel Capacity");
         int fuelCapacity = input.nextInt();
+        String filePaths = "Spaceships.CSV";
 
+        // Try-with-resources to handle file writing
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePaths))) {
+            writer.write(new Spaceship(name, Currentfuel, fuelCapacity).toCSV());
+            writer.newLine(); // Write each astronaut on a new line
+            System.out.println("CSV file created successfully: " + filePaths);
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
         return new Spaceship(name, Currentfuel, fuelCapacity);
     }
 

@@ -63,6 +63,7 @@ public class Launch {
         if (altitude >= SPACEWALK_ALTITUDE) {
             spacewalk();
         }
+        returnToEarth();
         return "Fuel depleted. The spaceship reached an altitude of " + altitude + " meters.";
 
         // Checking if spacewalk is possible

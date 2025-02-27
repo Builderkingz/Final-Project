@@ -39,4 +39,8 @@ public class Spaceship {
     public void SetFuelCapacity(int fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
     }
+
+    public String toCSV() {
+       return name + "," + currentFuel + "," + fuelCapacity;
+    }
 }
