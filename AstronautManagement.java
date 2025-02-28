@@ -11,8 +11,8 @@ public class AstronautManagement {
     public static void displayMenu() {
         System.out.println("\n Menu");
         System.out.println("1. Create a new Astronaut");
-        System.out.println("2. edit a Astronaut");
-        System.out.println("3. Remove a Astronaut");
+        System.out.println("2. Edit an Astronaut");
+        System.out.println("3. Remove an Astronaut");
         System.out.println("4. Quit");
         System.out.print("\n Enter your choice (1-4): ");
     }
@@ -21,38 +21,38 @@ public class AstronautManagement {
         System.out.println("\n" + " Enter Astronaut name: ");
         String name = input.nextLine();
 
-        System.out.println("\n" + " Enter date of birth (day, month, year) ");
+        System.out.println("\n" + " Enter date of birth (day, month, year): ");
         String date = input.nextLine();
 
-        System.out.println("\n" + " Enter the Serial Number");
+        System.out.println("\n" + " Enter the astronaut's serial number: ");
         int SerialNum = input.nextInt();
         input.nextLine();
 
-        System.out.println("\n Enter their address");
+        System.out.println("\n Enter the astronaut's address: ");
         String address = input.nextLine();
 
-        System.out.println(" \n Enter the email");
+        System.out.println(" \n Enter the astronaut's email: ");
         String email = input.nextLine();
         // Check if the email ends with "@gmail.com" and continue asking if it is
         // invalid
         while (!email.endsWith("@gmail.com")) {
-            System.out.println("Invalid email. Please enter a valid Gmail address.");
+            System.out.println("Invalid email. Please enter a valid email address.");
             email = input.nextLine(); // Get the email again if invalid
         }
 
         System.out.println("Email accepted.");
 
-        System.out.println("\n" + " Enter their weight");
+        System.out.println("\n" + " Enter the astronaut's weight: ");
         double weight = input.nextDouble();
         input.nextLine();
 
-        System.out.println("\n" + " Enter their next of kin");
+        System.out.println("\n" + " Enter the astronaut's next of kin: ");
         String kin = input.nextLine();
 
-        System.out.println("\n" + "Enter their phone number");
+        System.out.println("\n" + "Enter the astronaut's phone number: ");
         String number = input.nextLine();
 
-        System.out.println("\n" + "Enter their pay");
+        System.out.println("\n" + "Enter the astronaut's pay: ");
         int pay = input.nextInt();
         // Path to the output file
         String filePaths = "Astronaut.csv";
@@ -71,7 +71,7 @@ public class AstronautManagement {
     }
 
     public static Astronaut editAstronaut(Scanner input, ArrayList<Astronaut> astronauts) {
-        System.out.println("what astronaut do you want ");
+        System.out.println("Which astronaut do you want to edit? ");
         for (int i = 0; i < astronauts.size(); i++) {
             System.out.println(i + ":\t" + astronauts.get(i).getName());
         }
@@ -84,31 +84,31 @@ public class AstronautManagement {
         Astronaut astronautToEdit = astronauts.get(craftNumber);
 
         // Proceed to edit details of the astronaut
-        System.out.println("\nEnter date of birth (day, month, year):");
+        System.out.println("\nEnter date of birth (Day, Month, Year): ");
         astronautToEdit.SetDate(input.nextLine());
         input.nextLine();
 
-        System.out.println("\nEnter the Serial Number:");
+        System.out.println("\nEnter the astronaut's serial number: ");
         astronautToEdit.SetSerialNum(input.nextInt());
         input.nextLine(); // Consume the newline character
 
-        System.out.println("\nEnter their address:");
+        System.out.println("\nEnter the astronaut's address: ");
         astronautToEdit.SetAddress(input.nextLine());
 
-        System.out.println("\nEnter the email:");
+        System.out.println("\nEnter the astronaut's email: ");
         astronautToEdit.SetEmail(input.nextLine());
 
-        System.out.println("\nEnter their weight:");
+        System.out.println("\nEnter the astronaut's weight: ");
         astronautToEdit.SetWeight(input.nextDouble());
         input.nextLine(); // Consume the newline character
 
-        System.out.println("\nEnter their next of kin:");
+        System.out.println("\nEnter the astronaut's next of kin: ");
         astronautToEdit.SetKin(input.nextLine());
 
-        System.out.println("\nEnter their phone number:");
+        System.out.println("\nEnter the astronaut's phone number: ");
         astronautToEdit.SetNumber(input.nextLine());
 
-        System.out.println("\nEnter their pay:");
+        System.out.println("\nEnter the astronaut's pay: ");
         astronautToEdit.SetPay(input.nextInt());
 
         System.out.println("Astronaut updated successfully.");
@@ -120,7 +120,7 @@ public class AstronautManagement {
     }
 
     public static Astronaut removeAstronaut(Scanner input, ArrayList<Astronaut> astronauts) {
-        System.out.println("what astronaut do you want ");
+        System.out.println("Which astronaut do you want to remove? ");
         for (int i = 0; i < astronauts.size(); i++) {
             System.out.println(i + ":\t" + astronauts.get(i).getName());
         }

@@ -26,7 +26,7 @@ public class MissionControl {
                 boolean fileCreated = file.createNewFile();
                 if (fileCreated) {
                     System.out.println("File was created: " + filePath);
-                    System.out.println("what is your admin pasword");
+                    System.out.println("What is your admin password? ");
                     pas = input.nextLine();
                     String pasword = Pasword.encrypt(pas);
                     try (FileWriter writer = new FileWriter(filePath)) {
@@ -37,7 +37,7 @@ public class MissionControl {
                         e.printStackTrace();
                     }
                 } else {
-                    System.out.println("File could not be created.");
+                    System.out.println("The file could not be created.");
                 }
 
             } catch (IOException e) {
@@ -57,13 +57,13 @@ public class MissionControl {
             System.out.println("An error occurred while reading the file.");
             e.printStackTrace();
         }
-        System.out.println("What is the pasword");
+        System.out.println("What is the password? ");
         String userpasword = input.nextLine();
         String decryptedPassword = Pasword.decrypt(line);
         if (decryptedPassword.equals(userpasword)) {
-            System.out.println("correct pasword");
+            System.out.println("Correct password.");
         } else {
-            System.out.println("Worng pasword");
+            System.out.println("Incorrect password.");
             input.close();
         }
 

@@ -18,7 +18,7 @@ public class Launch {
 
     // Launch simulation
     public String launch(ArrayList<Spaceship> spaceships, Scanner input) {
-        System.out.println("Enter the ship you want to Launch");
+        System.out.println("Select the ship you want to launch: ");
         for (int i = 0; i < spaceships.size(); i++) {
             System.out.println(i + ":\t" + spaceships.get(i).GetName());
         }

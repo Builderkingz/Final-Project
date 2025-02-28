@@ -10,11 +10,11 @@ public class SpaceshipManagement {
         System.out.println("\n" + " Enter spacecraft name: ");
         String name = input.nextLine();
 
-        System.out.println("Enter the amount of current fuel it has");
+        System.out.println("Enter the amount of current fuel the spaceship contains: ");
         double Currentfuel = input.nextDouble();
         input.nextLine();
 
-        System.out.println("what is the fuel Capacity");
+        System.out.println("What is the fuel capacity? ");
         int fuelCapacity = input.nextInt();
         String filePaths = "Spaceships.CSV";
 
@@ -37,7 +37,7 @@ public class SpaceshipManagement {
         // Loop through the astronauts
         // When the astronaut is selected
         // ships[indexNumberOfSelectedShip].assignedAstronauts.add(astros[indexNumberOfSelectedAstronaut])
-        System.out.println("Enter the ship you want to assign to");
+        System.out.println("Enter which ship you want to assign to the astronaut: ");
         for (int i = 0; i < spaceships.size(); i++) {
             System.out.println(i + ":\t" + spaceships.get(i).GetName());
         }
@@ -63,7 +63,7 @@ public class SpaceshipManagement {
     }
 
     public static ArrayList<Spaceship> LoadFuel(ArrayList<Spaceship> spaceships, Scanner input) {
-        System.out.println("what Spaceship do you want to Refill");
+        System.out.println("Which spaceship do you want to refill? ");
         for (int i = 0; i < spaceships.size(); i++) {
             System.out.println(i + ":\t" + spaceships.get(i).GetName());
         }
@@ -72,10 +72,10 @@ public class SpaceshipManagement {
             System.out.println("Invalid spacecraft selection.");
             selectedShip = input.nextInt();
         }
-        System.out.println("how much fuel do you want to refill");
+        System.out.println("How much fuel do you want to refuel? ");
         int fuelAmount = input.nextInt();
         if (fuelAmount <= 0) {
-            System.out.println("Invalid amout please enter a positive amount ");
+            System.out.println("Invalid amount. Please enter a positive amount.");
         }
         if (spaceships.get(selectedShip).GetFuel() + fuelAmount > spaceships.get(selectedShip).GetFuelCapacity()) {
 
