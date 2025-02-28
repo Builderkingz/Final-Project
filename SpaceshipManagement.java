@@ -19,7 +19,7 @@ public class SpaceshipManagement {
         String filePaths = "Spaceships.CSV";
 
         // Try-with-resources to handle file writing
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePaths))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePaths,true))) {
             writer.write(new Spaceship(name, Currentfuel, fuelCapacity).toCSV());
             writer.newLine(); // Write each astronaut on a new line
             System.out.println("CSV file created successfully: " + filePaths);

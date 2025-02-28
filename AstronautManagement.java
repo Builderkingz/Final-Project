@@ -1,7 +1,9 @@
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -31,11 +33,14 @@ public class AstronautManagement {
 
         System.out.println(" \n Enter the email");
         String email = input.nextLine();
-        if (email.endsWith("@gmail.com")) {
-            System.out.println("Email accepted.");
-        } else {
+        // Check if the email ends with "@gmail.com" and continue asking if it is
+        // invalid
+        while (!email.endsWith("@gmail.com")) {
             System.out.println("Invalid email. Please enter a valid Gmail address.");
+            email = input.nextLine(); // Get the email again if invalid
         }
+
+        System.out.println("Email accepted.");
 
         System.out.println("\n" + " Enter their weight");
         double weight = input.nextDouble();
@@ -53,18 +58,15 @@ public class AstronautManagement {
         String filePaths = "Astronaut.csv";
 
         // Try-with-resources to handle file writing
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePaths))) {
-            // Writing Astronauts to file
-            // writer.write("Name,Date,SerialNum,Address,Email,Weight,Kin,Number,Pay");
-            // writer.newLine();
-
-            writer.write(new Astronaut(name, date, SerialNum, address, email, weight, kin, number, pay).toCSV());
-            writer.newLine(); // Write each astronaut on a new line
-            System.out.println("CSV file created successfully: " + filePaths);
-        } catch (IOException e) {
-            System.out.println("An error occurred while writing to the file.");
-            e.printStackTrace();
-        }
+        try (PrintWriter writer = new PrintWriter(new FileWriter(filePaths, true))) {
+            // Append the new astronaut data to the file
+        writer.append(new Astronaut(name, date, SerialNum, address, email, weight, kin, number, pay).toCSV() + "\n");
+        
+        System.out.println("CSV file updated successfully: " + filePaths);
+    } catch (IOException e) {
+        System.out.println("An error occurred while writing to the file.");
+        e.printStackTrace();
+    }
         return new Astronaut(name, date, SerialNum, address, email, weight, kin, number, pay);
     }
 
@@ -142,7 +144,7 @@ public class AstronautManagement {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (Astronaut astronaut : astronauts) {
-                writer.write(astronaut.toCSV()); // Assuming toCSV() returns a CSV-friendly string
+                writer.write(astronaut.toCSV() + "\n"); // Assuming toCSV() returns a CSV-friendly string
                 writer.newLine();
             }
             System.out.println("CSV file updated successfully.");

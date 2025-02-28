@@ -1,5 +1,6 @@
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -74,31 +75,32 @@ public class MissionControl {
         String astroPath = "Astronaut.csv";
         try (BufferedReader reader = new BufferedReader(new FileReader(astroPath))) {
             String astroLine;
-            astroLine = reader.readLine();
+            // astroLine = reader.readLine();
             while ((astroLine = reader.readLine()) != null) {
                 // Split line by comma
                 String[] data = astroLine.split(",");
-            // Ensure that the line has exactly 9 values (matching the columns in the CSV)
-            if (data.length == 9) {
-                // Parse data from the CSV file and create a new Astronaut object
-                String name = data[0];
-                String date = data[1];
-                int serialNum = Integer.parseInt(data[2]);
-                String address = data[3];
-                String email = data[4];
-                double weight = Double.parseDouble(data[5]);
-                String kin = data[6];
-                String number = data[7];
-                int pay = Integer.parseInt(data[8]);
+                // Ensure that the line has exactly 9 values (matching the columns in the CSV)
+                if (data.length == 9) {
+                    // Parse data from the CSV file and create a new Astronaut object
+                    String name = data[0];
+                    String date = data[1];
+                    int serialNum = Integer.parseInt(data[2]);
+                    String address = data[3];
+                    String email = data[4];
+                    double weight = Double.parseDouble(data[5]);
+                    String kin = data[6];
+                    String number = data[7];
+                    int pay = Integer.parseInt(data[8]);
 
-                // Create a new Astronaut object and add it to the ArrayList
-                Astronaut astronaut = new Astronaut(name, date, serialNum, address, email, weight, kin, number,
-                        pay);
-                astronauts.add(astronaut);
+                    // Create a new Astronaut object and add it to the ArrayList
+                    Astronaut astronaut = new Astronaut(name, date, serialNum, address, email, weight, kin, number,
+                            pay);
+                    astronauts.add(astronaut);
+                    // appendAstronautToCSV(astronaut);
 
+                }
             }
-        }
-            
+
         } catch (IOException e) {
             System.out.println("An error occurred while reading the file.");
             e.printStackTrace();
@@ -110,20 +112,21 @@ public class MissionControl {
             while ((line = reader.readLine()) != null) {
                 // Split line by comma
                 String[] data = SpaceLine.split(",");
-            // Ensure that the line has exactly 9 values (matching the columns in the CSV)
-            if (data.length == 3) {
-                // Parse data from the CSV file and create a new Astronaut object
-                String name = data[0];
-                double currentFuel = Double.parseDouble(data[1]);
-                int fuelCapacity = Integer.parseInt(data[2]);
+                // Ensure that the line has exactly 9 values (matching the columns in the CSV)
+                if (data.length == 3) {
+                    // Parse data from the CSV file and create a new Astronaut object
+                    String name = data[0];
+                    double currentFuel = Double.parseDouble(data[1]);
+                    int fuelCapacity = Integer.parseInt(data[2]);
 
-                // Create a new Astronaut object and add it to the ArrayList
-                Spaceship spaceship = new Spaceship(name, currentFuel, fuelCapacity);
-                spaceships.add(spaceship);
+                    // Create a new Astronaut object and add it to the ArrayList
+                    Spaceship spaceship = new Spaceship(name, currentFuel, fuelCapacity);
+                    spaceships.add(spaceship);
+                    // appendSpaceshipToCSV(spaceship);
 
+                }
             }
-        }
-            
+
         } catch (IOException e) {
             System.out.println("An error occurred while reading the file.");
             e.printStackTrace();
@@ -241,4 +244,33 @@ public class MissionControl {
 
         } while (choice != 4);
     }
+
+
+
+    public static void appendAstronautToCSV(Astronaut astronaut) {
+    String filePath = "Astronaut.csv";
+
+    // Open the file in append mode
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {  // 'true' means append mode
+        writer.write(astronaut.toCSV());  // Assuming toCSV() formats the astronaut data as CSV
+        writer.newLine();  // Ensure each astronaut is on a new line
+        System.out.println("Astronaut added to CSV.");
+    } catch (IOException e) {
+        System.out.println("An error occurred while appending to the file.");
+        e.printStackTrace();
+    }
+}
+public static void appendSpaceshipToCSV(Spaceship spaceship) {
+    String filePath = "Spaceships.CSV";
+
+    // Open the file in append mode
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {  // 'true' means append mode
+        writer.write(spaceship.toCSV());  // Assuming toCSV() formats the spaceship data as CSV
+        writer.newLine();  // Ensure each spaceship is on a new line
+        System.out.println("Spaceship added to CSV.");
+    } catch (IOException e) {
+        System.out.println("An error occurred while appending to the file.");
+        e.printStackTrace();
+    }
+}
 }
